@@ -31,7 +31,7 @@ Feature: Validate the Schedule Activity feature.
     And Click on Wrap Up
     And Click on Submit button in wrap up sccreen
     And Select "Inbound correspondence" from the View Queue for workbasket
-    And Open the required Case Id by clicking on "S-366" link
+    And Open the required Case Id by clicking on "S-367" link
     And Select "Resolve" in Resolve work screen
    # And Enter "comments" in note field
     And Click on Submit button
@@ -57,7 +57,7 @@ Feature: Validate the Schedule Activity feature.
     And Select an  account "<LinkAccount>" from link account dropdown
     And Select "Work queue" from Assign to dropdown
     And Select "Inbound correspondence" from the workbasket
-  #  And Enter "comments" in note field
+ #   And Enter "comments" in note field
     And Click on Submit button
     Then verify  the message case has been created successfully
     And Click on Confirm button
@@ -66,7 +66,7 @@ Feature: Validate the Schedule Activity feature.
     And Select "Inbound correspondence" from the View Queue for workbasket
     And Open the required Case Id by clicking on "<CaseId>" link
     And Select "Resolve" in Resolve work screen
- #   And Enter "comments" in note field
+  #  And Enter "comments" in note field
     And Click on Submit button
     And Click on Confirm button
     When I click on down arrow
@@ -75,5 +75,5 @@ Feature: Validate the Schedule Activity feature.
 
     Examples: 
       | TaskType               | LinkAccount                              | CaseId |
-      | Incorrect Case         | Personal Checking : 12345678             | S-367  |
-      | Research Credit Issues | Platinum Rewards Card : 7895543245678901 | S-368  |
+      | Incorrect Case         | Personal Checking : 12345678             | S-368  |
+      | Research Credit Issues | Platinum Rewards Card : 7895543245678901 | S-369  |
