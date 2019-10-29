@@ -41,7 +41,7 @@ Feature: Validate the Schedule Activity feature.
     Then Logout should be successful
 
   #Author U.Ramakrishna
-  #@Regression
+  @Regression
   Scenario Outline: Launch the interaction with John  Brown for Schedule Activity Service Case and create task.
     And Click on New button
     And Hover On Demo Screen Pops
