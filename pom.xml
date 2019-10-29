@@ -110,18 +110,18 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.17</version>
 				<configuration>
-			 <!--  <testFailureIgnore>true</testFailureIgnore> -->  <!-- Uncomment this if want to generate cucumber reports by ignoring tets failures -->
+			 <!--  <testFailureIgnore>true</testFailureIgnore> -->  <!-- Local Reports-Uncomment this if want to generate cucumber reports by ignoring tets failures -->
 					<suiteXmlFiles>
 						<!-- <suiteXmlFile>localsequentialtestng.xml</suiteXmlFile> <suiteXmlFile>localparalleltestng.xml</suiteXmlFile> 
 							<suiteXmlFile>gridparalleltestng.xml</suiteXmlFile> <suiteXmlFile>${suiteXml}</suiteXmlFile> 
 							<suiteXmlFile>src/test/java/com/cucumber/framework/testng/testNG.xml</suiteXmlFile> -->
-					    <!--  <suiteXmlFile>${suiteXml}</suiteXmlFile>  -->    <!-- Run from jenkins -->
-						  <suiteXmlFile>testNGSequential.xml</suiteXmlFile>    <!-- Run from local -->
+					     <suiteXmlFile>${suiteXml}</suiteXmlFile>    <!-- Run from jenkins -->
+						 <!--  <suiteXmlFile>testNGSequential.xml</suiteXmlFile> -->    <!-- Run from local -->
 					</suiteXmlFiles>
-				<!--    <systemPropertyVariables>
+				   <systemPropertyVariables>
 					  	<Browser>${browserName}</Browser>
 						<URL>${url}</URL>
-					</systemPropertyVariables> -->  <!-- System property part Runs from jenkins -->             
+					</systemPropertyVariables>  <!-- System property part Runs from jenkins -->             
 				</configuration>
 			</plugin>
 
@@ -140,7 +140,7 @@
 							<projectName>TESTDEMO</projectName>
 							<outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber-report/cucumber.json</cucumberOutput>
-							<!--  <checkBuildResult>true</checkBuildResult>  -->  <!-- uncomment this only when to generate cucumber reports even they are failures making build as success -->
+							<!--  <checkBuildResult>true</checkBuildResult>  -->  <!-- Local Reports-uncomment this only when to generate cucumber reports even they are failures making build as success -->
 						<!-- <buildNumber>1</buildNumber> -->
 						</configuration>
 					</execution>
