@@ -75,5 +75,5 @@ Feature: Validate the Schedule Activity feature.
 
     Examples: 
       | TaskType               | LinkAccount                              | CaseId |
-      | Incorrect Case         | Personal Checking : 12345678             | S-359  |
-      | Research Credit Issues | Platinum Rewards Card : 7895543245678901 | S-360  |
+      | Incorrect Case         | Personal Checking : 12345678             | S-361  |
+      | Research Credit Issues | Platinum Rewards Card : 7895543245678901 | S-362  |
