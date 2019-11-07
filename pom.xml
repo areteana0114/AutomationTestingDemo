@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test</groupId>
-	<artifactId>TESTDEMO</artifactId>
+	<artifactId>TESTINGDEMO</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
@@ -110,18 +110,19 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.17</version>
 				<configuration>
-			 <!--  <testFailureIgnore>true</testFailureIgnore> -->  <!-- Local Reports-Uncomment this if want to generate cucumber reports by ignoring tets failures -->
+		 <!--  <testFailureIgnore>true</testFailureIgnore> -->   <!-- Run from local Reports-Uncomment this if want to generate cucumber reports by ignoring test failures -->
 					<suiteXmlFiles>
 						<!-- <suiteXmlFile>localsequentialtestng.xml</suiteXmlFile> <suiteXmlFile>localparalleltestng.xml</suiteXmlFile> 
 							<suiteXmlFile>gridparalleltestng.xml</suiteXmlFile> <suiteXmlFile>${suiteXml}</suiteXmlFile> 
 							<suiteXmlFile>src/test/java/com/cucumber/framework/testng/testNG.xml</suiteXmlFile> -->
-					     <suiteXmlFile>${suiteXml}</suiteXmlFile>    <!-- Run from jenkins -->
-						 <!--  <suiteXmlFile>testNGSequential.xml</suiteXmlFile> -->    <!-- Run from local -->
+					    <suiteXmlFile>${suiteXml}</suiteXmlFile>   <!-- Run from jenkins -->
+						<!--   <suiteXmlFile>testNGSequential.xml</suiteXmlFile> -->   <!-- Run from local -->
 					</suiteXmlFiles>
-				   <systemPropertyVariables>
+				    <systemPropertyVariables>
 					  	<Browser>${browserName}</Browser>
 						<URL>${url}</URL>
-					</systemPropertyVariables>  <!-- System property part Runs from jenkins -->             
+					</systemPropertyVariables>  <!-- System property part Runs from jenkins -->          
+			<!-- 	<argLine>-Dcucumber.options="-tags  @Test3,@Test1"</argLine> -->   <!-- Run from local for single scenario execution original syntax is -Dcucumber.options=" two hyphens tags  @Test3,@Test1" -->
 				</configuration>
 			</plugin>
 
@@ -140,7 +141,7 @@
 							<projectName>TESTDEMO</projectName>
 							<outputDirectory>${project.build.directory}/site/cucumber-reports</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber-report/cucumber.json</cucumberOutput>
-							<!--  <checkBuildResult>true</checkBuildResult>  -->  <!-- Local Reports-uncomment this only when to generate cucumber reports even they are failures making build as success -->
+						<!-- 	  <checkBuildResult>true</checkBuildResult> -->   <!-- Run from local to generate Reports-uncomment this only when to generate cucumber reports even they are failures making build as success -->
 						<!-- <buildNumber>1</buildNumber> -->
 						</configuration>
 					</execution>
@@ -165,8 +166,6 @@
 					<generatedHtmlReportDirectory>${project.build.directory}\test-report</generatedHtmlReportDirectory>
 				</configuration>
 			</plugin> -->
-
-
 
 
 
